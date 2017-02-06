@@ -1,0 +1,7 @@
+This is an proof of concept implementation of Google Protobuf RPC using muduo.
+The object lifetime management is for from ideal and doesn't follow the usual
+muduo approach.
+
+Please consider using http://github.com/chenshuo/muduo-protorpc instead.
+
+在build中是将二个proto集中在一起，编译的时候需要看一下依赖关系，手动指定编译次序，blade build :rpcclient_proto，之后再blade build :rpcservice_proto

@@ -1,0 +1,26 @@
+cc_library (
+  name = "libbase",
+  srcs = [
+  "AsyncLogging.cc",
+  "Condition.cc",
+  "CountDownLatch.cc",
+  "Date.cc",
+  "Exception.cc",
+  "FileUtil.cc",
+  "LogFile.cc",
+  "Logging.cc",
+  "LogStream.cc",
+  "ProcessInfo.cc",
+  "Timestamp.cc",
+  "TimeZone.cc",
+  "Thread.cc",
+  "ThreadPool.cc",
+  ],
+  deps = [
+    "//thirdparty/boost:boost_date_time",
+    '//thirdparty/boost:boost_locale',
+    "//thirdparty/boost:boost_system",
+    "//thirdparty/boost:boost_thread",
+    "#pthread",
+    "#rt",
+  ])
